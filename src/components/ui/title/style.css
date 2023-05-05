@@ -1,0 +1,21 @@
+.title {
+    font-size: 36px;
+}
+
+.title--small {
+    font-size: 28px;
+}
+
+.title--big {
+    font-size: 44px;
+}
+.stars .title {
+    align-self: center;
+    margin: 0;
+    padding-bottom: 64px;
+}
+
+.stars__article .title--small {
+    align-self: flex-start;
+    padding-bottom: 12px;
+}
