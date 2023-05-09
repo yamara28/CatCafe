@@ -1,4 +1,8 @@
-.button {
+import styled from "styled-components";
+
+const Button = styled.button.attrs(()=>({
+    type: "button",
+}))`
     align-self: center;
     padding: 16px 24px;
     font-family: 'Inter';
@@ -10,3 +14,6 @@
     border-radius: 5px;
     border: none;
 }
+`;
+
+export default Button;

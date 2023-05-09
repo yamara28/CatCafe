@@ -1,13 +1,26 @@
 import React from "react";
-import logo from  "../../../images/logo.svg";
+import styled from "styled-components";
 
-import "../logo/style.css";
+import ImageLogo from "./logo-image.js";
 
-export default function Logo () {
+const StyledLogo = styled.p`
+    display: flex;
+    align-items: center;
+    gap: 24px;
+`;
+
+const StyledSpan = styled.span`
+font-weight: 700;
+font-size: 28px;
+line-height: 42px;
+color: #333333;
+`;
+
+export default function Logo() {
     return (
-        <p className="logo">
-            <img src={logo} width="44" height="44" alt="logo"></img>
-            <span>Котокафе</span>
-        </p>
+        <StyledLogo>
+            <ImageLogo />
+            <StyledSpan>Котокафе</StyledSpan>
+        </StyledLogo>
     )
 }

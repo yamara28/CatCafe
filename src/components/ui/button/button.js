@@ -1,9 +1,9 @@
 import React from "react";
 
-import "../button/style.css";
+import Button from "../button/styled";
 
-export default function Button () {
-   return (
-     <button className="button" type="button">Купить билет</button>
-   )
+export default function StyledButton() {
+  return (
+    <Button >Купить билет</Button>
+  )
 }

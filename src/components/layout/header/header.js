@@ -1,16 +1,27 @@
 import React from "react";
+import styled from "styled-components";
+
 import Button from "../../ui/button/button";
 import Logo from "../../ui/logo/logo";
 
-import "../header/style.css";
+const StyledHeader = styled.header`
+max-width: 1280px;
+`;
+
+const Wrapper = styled.div`
+display: flex;
+justify-content: space-between;
+padding: 10px 90px;
+`;
+
 
 export default function Header () {
     return (
-        <header className="header">
-            <div className="header__wrapper">
+        <StyledHeader >
+            <Wrapper >
             <Logo />
             <Button />
-            </div>
-        </header>
+            </Wrapper>
+        </StyledHeader>
     )
 }

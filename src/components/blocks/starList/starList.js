@@ -1,17 +1,17 @@
 import React from "react";
 
-import Title, { TitleSize } from "../../ui/title/title";
+import Title from "../../ui/title/title";
 import Button from "../../ui/button/button";
 import StarItem from "../../ui/starItem/starItem";
-import "../starList/style.css";
+import {StyledList, StyledArticle} from "./styled.js";
 
 export default function StarList({ stars }) {
     return (
-        <section className="about__stars stars">
+        <StyledArticle >
             {stars?.length ? (
                 <>
-                    <Title size={TitleSize.DEFAULT}>Наши звезды</Title>
-                    <ul className="stars__list">
+                    <Title>Наши звезды</Title>
+                    <StyledList>
                         {stars.map((star) => {
                             return (
                                 <li className="stars__item" key={star.id}>
@@ -19,11 +19,11 @@ export default function StarList({ stars }) {
                                 </li>
                             ) 
                         })}
-                    </ul>
+                    </StyledList>
                     <Button />
                 </>
             )
                 : null }
-        </section>
+        </StyledArticle>
     )
 }

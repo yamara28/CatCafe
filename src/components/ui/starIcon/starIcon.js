@@ -1,10 +1,10 @@
 import React from "react";
 
-import "./style.css";
+import Icon from  "./styled.js";
 
-function StarIcon({ children, className }) {
+function StarIcon({ children, color }) {
     return (
-        <p className={`star__icon${className ? ` icon--${className}` : ""}`}>{children}</p>
+        <Icon color={color}>{children}</Icon>
     )
 }
 

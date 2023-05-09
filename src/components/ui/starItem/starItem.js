@@ -1,8 +1,9 @@
 import React from "react";
-import Title, { TitleSize } from "../title/title";
-import StarIcon from "../starIcon/starIcon";
+import Title from "../title/title";
+import Icon from "../starIcon/starIcon";
 
-import "../starItem/style.css";
+import {Article, ItemImage, ItemText } from "./styled";
+
 
 
 export default function StarItem(
@@ -15,12 +16,11 @@ export default function StarItem(
     }
 ) {
     return (
-        <article className="stars__article">
-            <StarIcon className={style} >{text}</StarIcon>
-            <img className="stars__image" src={image} width="313" height="313" alt={name}></img>
-            <Title size={TitleSize.SMALL}>{name}</Title>
-            <p className="stars__text">{description}</p>
-
-        </article>
+        <Article >
+            <Icon color={style} >{text}</Icon>
+            <ItemImage src={image} width="313" height="313" alt={name}></ItemImage>
+            <Title size="small">{name}</Title>
+            <ItemText >{description}</ItemText>
+        </Article>
     )
 }
