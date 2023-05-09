@@ -42,7 +42,6 @@ const Time = styled.p`
     border-radius: 8px;
 `;
 
-
 const Addres = styled.p`
     position: relative;
     padding-left: 20px;
